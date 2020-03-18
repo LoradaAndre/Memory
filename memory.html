@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="21809742" name="author"/>
+    <title>Memory en Javascript</title>
+
+    <link rel="stylesheet" type="text/css" href="src/css/memory.css">
+
+
+
+</head>
+<body>
+  <div id="wrapper">
+      <section class="controles">
+          <h2>Memory</h2>
+      </section>
+
+      <div id="jeu"></div>
+  </div>
+  <script type="text/javascript" src="src/js/memory.js"></script>
+  <script>
+
+      // initialiser les capteurs d'évènements ici
+      // et écrire les fonctions callback dans memory.js
+
+      "use strict";
+
+      startMemoryGame();
+
+      let carte = document.querySelectorAll("#jeu div");
+      let newpartie = document.getElementById("boutton");
+      let saveGame = document.getElementById("boutton2");
+
+
+      for(let i=0 ; i<carte.length; i++){
+        carte[i].addEventListener("click", gamePlay);
+      }
+      console.log(newpartie)
+      newpartie.addEventListener('click', refresh);
+      saveGame.addEventListener('click', sauvegarderPartie);
+
+  </script>
+
+</body>
+</html>

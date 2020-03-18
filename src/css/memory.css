@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+h2{
+  text-align: center;
+}
+#wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    height: calc(100vh - 20px);
+    margin: 10px;
+}
+
+section {
+    padding: 10px;
+}
+
+#jeu {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+}
+/*fils direct à #jeu*/
+#jeu > div {
+    padding: 5px;
+}
+
+#jeu > div > img {
+    max-width: 100%;
+    display: block;
+}
+#label{
+  display: block;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+h3,h4{
+  text-align: center;
+}
+#boutton,#boutton2{
+  margin: 3px;
+}
